@@ -1,0 +1,125 @@
+{
+	"archive" : {},
+	"artifacts" : 
+	[
+		{
+			"path" : "armourplate/libarmourplate.a"
+		}
+	],
+	"backtrace" : 1,
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"add_library",
+			"target_link_libraries",
+			"target_include_directories"
+		],
+		"files" : 
+		[
+			"armourplate/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 6,
+				"parent" : 0
+			},
+			{
+				"command" : 1,
+				"file" : 0,
+				"line" : 10,
+				"parent" : 0
+			},
+			{
+				"command" : 2,
+				"file" : 0,
+				"line" : 8,
+				"parent" : 0
+			}
+		]
+	},
+	"compileGroups" : 
+	[
+		{
+			"compileCommandFragments" : 
+			[
+				{
+					"fragment" : " "
+				},
+				{
+					"fragment" : "-std=gnu++17"
+				}
+			],
+			"includes" : 
+			[
+				{
+					"backtrace" : 3,
+					"path" : "/home/linyun/桌面/23-vision-ZhuRonghui/armo_detect/armourplate/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/linyun/桌面/23-vision-ZhuRonghui/armo_detect/lightbar/include"
+				},
+				{
+					"backtrace" : 2,
+					"path" : "/home/linyun/桌面/23-vision-ZhuRonghui/armo_detect/image_preprocessing/include"
+				},
+				{
+					"backtrace" : 3,
+					"isSystem" : true,
+					"path" : "/usr/local/include/opencv4"
+				}
+			],
+			"language" : "CXX",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"dependencies" : 
+	[
+		{
+			"backtrace" : 2,
+			"id" : "preimg::@bd01ed274b53b3ff3c0b"
+		},
+		{
+			"backtrace" : 2,
+			"id" : "lightbar::@0cac3460774533672bc7"
+		}
+	],
+	"id" : "armourplate::@5e790991e1073d113476",
+	"name" : "armourplate",
+	"nameOnDisk" : "libarmourplate.a",
+	"paths" : 
+	{
+		"build" : "armourplate",
+		"source" : "armourplate"
+	},
+	"sourceGroups" : 
+	[
+		{
+			"name" : "Source Files",
+			"sourceIndexes" : 
+			[
+				0
+			]
+		}
+	],
+	"sources" : 
+	[
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "armourplate/src/armourplate.cpp",
+			"sourceGroupIndex" : 0
+		}
+	],
+	"type" : "STATIC_LIBRARY"
+}
