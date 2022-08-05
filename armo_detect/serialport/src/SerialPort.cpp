@@ -40,7 +40,7 @@ bool SerialPort::SerialPort_init(SerialPort &UART){
 * 修改原因：进一步完善功能
 * 旁注：由于舵机的精度不够，只能进行至少1度的调整，因此这里的行参就直接截断成整型了，若有需要可更改
 *********************************************************************************************/
-vector<unsigned char> SerialPort::SendMessage(int angleX,int angleY){
+vector<unsigned char> SerialPort::SendMessageChange(int angleX,int angleY){
     stringstream x1;								//使用sstream和string来修剪数据
     stringstream y1;
     string temp;

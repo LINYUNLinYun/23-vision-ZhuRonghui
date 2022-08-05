@@ -56,7 +56,7 @@ class Pre_image{
     static void line(Mat inputArray,Point2f ptr[]);
     
     /**
-     * @brief 输入三个点,判断点b是不是直角
+     * @brief 输入图像上的三个点,判断点b是不是直角
      * 
      * @return true 
      * @return false 

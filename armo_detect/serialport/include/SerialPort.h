@@ -71,14 +71,20 @@ public:
 		enum StopBits StopBits;
 		enum Parity Parity;
 	} Config;
+	/**
+	 * @brief 串口打开函数
+	 * 
+	 * @return true 
+	 * @return false 
+	 */
 	bool Open();
 	void Close();
-	bool LoadConfig();
+	bool LoadConfig();	
 	bool Send(unsigned char byte);
 	bool Send(std::vector<unsigned char> data);
 	bool Send(char *data, unsigned int len);
 	bool SerialPort_init(SerialPort &UART);
-	std::vector<unsigned char> SendMessage(int angleX,int angleY);
+	std::vector<unsigned char> SendMessageChange(int angleX,int angleY);
 };
 
 /*

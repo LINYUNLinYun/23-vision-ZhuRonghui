@@ -24,7 +24,6 @@ vector<Armour> Armour::screen(vector<Armour> inputArmour){
     vector<Armour> tempArmour;
     float heightRate;
     float widthRate;
-        cout<<"210"<<inputArmour.size()<<endl;
     for(int i = 0;i<inputArmour.size();i++){
         //装甲的角点应该近似是90度（80-100）
         if(!Pre_image::rightAngle(inputArmour[i].armourPoints[0],inputArmour[i].armourPoints[1],inputArmour[i].armourPoints[2])){
@@ -46,12 +45,9 @@ vector<Armour> Armour::screen(vector<Armour> inputArmour){
         }
         //装甲板的长宽比应该在1.5-3.2
         double ratio = (inputArmour[i].upWidth+inputArmour[i].downWidth)/(inputArmour[i].leftHeight+inputArmour[i].rightHeight);
-        //cout<<"  width  "<<inputArmour[i].upWidth+inputArmour[i].downWidth<<endl;
-        //cout<<"  height  "<<inputArmour[i].leftHeight+inputArmour[i].rightHeight<<endl;
         if(ratio>3.2||ratio<1.5){
             continue;
         }
-        //cout<<"4444444"<<endl;
 
         tempArmour.push_back(inputArmour[i]);
     }

@@ -16,17 +16,30 @@ public:
     SolvePNP(){
         
     }
-
+    /**
+     * @brief 求解位姿函数
+     * 
+     * @param inputPtr 
+     */
     void solution(Point2f inputPtr[]);
+    //位姿
+    double x = 0;
+    double y = 0;
+    double z = 0;
+
+    double thetax = 0;
+    double thetaz = 0;
+    double thetay = 0;
+
+    //偏航
+    double yaw = 0;
+    //俯仰
+    double pitch = 0;
 
 private:
     
     //世界坐标系点
     vector<Point3f> _worldPoints = vector<Point3f>{
-        // Point3f(-HALF_WIDTH, -HALF_HEIGHT, 0),
-        // Point3f(-HALF_WIDTH, HALF_HEIGHT, 0),
-        // Point3f(HALF_WIDTH, HALF_HEIGHT, 0),
-        // Point3f(HALF_WIDTH, -HALF_HEIGHT, 0)
         //这里选择x轴正方向水平向右，y轴正方形竖直向下，z轴成右手系的世界坐标系
         Point3f(-HALF_WIDTH, HALF_HEIGHT, 0),
         Point3f(-HALF_WIDTH, -HALF_HEIGHT, 0),

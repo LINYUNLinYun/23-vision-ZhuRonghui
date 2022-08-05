@@ -1,17 +1,4 @@
 #include "My_kalman.h"
-/**********************************卡尔曼滤波模块开始********************************************/
-// const int stateNum = 6;					//当前状态值6×1向量(x,y)
-// const int measureNum = 6;                               //测量值6×1向量(x,y)	
-// KalmanFilter KF(stateNum, measureNum, 0);		//实例化卡尔曼滤波类
-// int T = 1;						//卡尔曼滤波参考系下的时间
-// Point2f predict_point;					//基于卡尔曼滤波预测的预测点
-// int sumT = 0;						//卡尔曼滤波参考系下的时间的总和（用于算法）
-// int T_time[3];						//当前帧、上一帧、上上一帧的时间
-// int t_count = 0;					//计数
-// Point2f llastp, lastp, nowp;				//储存当前帧、上一帧、上上一帧的点信息
-// Mat measurement = Mat::zeros(measureNum, 1, CV_32F);
-
-
 
 void My_kalman::kalman_init() {
 	
@@ -33,7 +20,6 @@ void My_kalman::kalman_init() {
 
 Point2f My_kalman::kalman_predict(Point2f target_centre) {
 	Mat prediction = KF.predict();			                //预测
-	//Mat measurement = Mat::zeros(measureNum, 1, CV_32F);	
 	llastPoint = lastPoint;					                //在新的一帧里，更新点的信息
 	lastPoint = nowPoint;
 	nowPoint = target_centre;

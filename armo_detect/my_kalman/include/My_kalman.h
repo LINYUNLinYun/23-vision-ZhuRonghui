@@ -44,5 +44,4 @@ private:
 
     KalmanFilter KF = KalmanFilter(stateNum,measureNum,0);		//实例化卡尔曼滤波类
     Mat measurement = Mat::zeros(measureNum, 1, CV_32F);
-    //Mat measurement = Mat::zeros(measureNum, 1, CV_32F);
 };

@@ -3,6 +3,7 @@ project(Armo)
 cmake_minimum_required(VERSION 3.10)
 
 set(CMAKE_CXX_STANDARD 17)  
+set(CMAKE_BUILD_TYPE Debug)
 
 find_package(OpenCV REQUIRED)
 
@@ -17,5 +18,5 @@ add_executable(${PROJECT_NAME} src/main.cpp)
 
 target_include_directories(${PROJECT_NAME} PUBLIC ${OpenCV_INCLUDE_DIRS})
 
-target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} preimg kalman lightbar armourplate solvepnp)
+target_link_libraries(${PROJECT_NAME} ${OpenCV_LIBS} preimg kalman lightbar armourplate solvepnp serialport)
 
